@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Shakti</string>
+
+    <!-- root asset directory -->
+    <string name="content_root"></string>
+
+    <!-- index file -->
+    <string name="index_file">index.json</string>
+
+    <!-- specify all available non-default font with: separating language and font asset file -->
+    <string-array name="fonts">
+        <item>bangla:fonts/bangla.ttf</item>
+    </string-array>
+
+    <!-- specify language with: separating language and root content dir -->
+    <string-array name="languages">
+        <item>english:english</item>
+        <item>bangla:bangla</item>
+    </string-array>
+
+</resources>

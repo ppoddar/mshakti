@@ -1,0 +1,67 @@
+[
+  { "path":"poem1.html",
+    "title": "Melodies of Joy",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"আনন্দ-ভৈরবী"
+    }
+  },
+  { "path":"poem2.html",
+    "title": "The key",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"চাবি"
+    }
+  },
+  { "path":"poem3.html",
+    "title": "Oboni, Are You Home?",
+    "language": "english",
+    "original": {
+      "title":"অবনী বাড়ি আছো ?",
+      "language": "bangla"
+    }
+  },
+  { "path":"poem4.html",
+    "title": "I, The Anarchist",
+    "language": "english",
+    "original": {
+      "title":"আমি স্বেছ্বাচারী।",
+      "language": "bangla"
+    }
+  },
+  { "path":"poem5.html",
+    "title": "Songs of Midnight",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"ফুটপাত বদল হয় মধ্যরাতে"
+    }
+  },
+  { "path":"poem6.html",
+    "title": "Postmen in Forest of Fall",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"হেমন্তের অরণ্যে আমি পোস্ট"
+    }
+  },
+  { "path":"poem7.html",
+    "title": "Why Did You Bring Me In?",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"আমাকে তুই আনলি কেন, ফিরিয়ে নে।"
+    }
+  },
+  { "path":"poem8.html",
+    "title": "I May Go, But Why?",
+    "language": "english",
+    "original": {
+      "language": "bangla",
+      "title":"যেতে পারি, কিন্তু, কেন যাবো?"
+    }
+  }
+
+]

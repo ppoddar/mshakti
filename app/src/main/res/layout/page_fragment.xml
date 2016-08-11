@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Display a page with title and body -->
+    <!-- Maintains two similar views for original and translated -->
+    <!-- one is visible and other is not -->
+
+    <RelativeLayout
+        android:id="@+id/layout_original"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    <TextView
+        android:id="@+id/page_title_original"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:singleLine="true"
+        style="@style/TitleStyle"
+        android:text="Original Title"
+        android:drawableBottom="@android:color/white"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_title_original"
+
+
+        android:fillViewport="false"
+        android:fadingEdge="none"
+        android:scrollbars="vertical|horizontal"
+        android:scrollbarSize="0dp"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbarStyle="insideOverlay"
+
+        >
+
+        <TextView
+            android:id="@+id/page_body_original"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scrollbars = "vertical"
+            android:text="Original Body..."
+            style="@style/BodyStyle"
+            />
+
+
+    </ScrollView>
+
+    </RelativeLayout>
+
+    <!-- An identical layout for translated -->
+
+    <RelativeLayout
+        android:id="@+id/layout_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/page_title_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:singleLine="true"
+            style="@style/TitleStyle"
+            android:text="Translated Title"
+            android:drawableBottom="@android:color/white"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/page_title_translation"
+
+
+            android:fillViewport="false"
+            android:fadingEdge="none"
+            android:scrollbars="vertical|horizontal"
+            android:scrollbarSize="0dp"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:scrollbarStyle="insideOverlay"
+
+            >
+
+            <TextView
+                android:id="@+id/page_body_translation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scrollbars = "vertical"
+                android:text="Translated Body..."
+                style="@style/BodyStyle"
+                />
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/translate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+
+        android:src="@drawable/ic_translate_black_24dp"
+        android:tint="@android:color/white"
+        />
+
+
+
+</RelativeLayout>

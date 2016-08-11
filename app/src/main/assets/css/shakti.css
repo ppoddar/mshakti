@@ -1,0 +1,19 @@
+.dropcap {
+	float:left;
+	width:3em;
+    width:0.7em;
+	vertical-align:text-top;
+    font-size: 200%;
+    line-height: 80%;
+    color:#888888;
+}
+
+.snippet {
+    margin:2em 5em 2em 5em;
+}
+
+#map-canvas {
+width:300px;
+height:300px;
+border:1px solid black;
+}

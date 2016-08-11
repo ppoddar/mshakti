@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.shakti">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/shakti_profile"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".FrontPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PageActivity"
+            android:parentActivityName=".FrontPageActivity">
+        </activity>
+        <activity android:name=".IndexPageActivity"
+            android:parentActivityName=".FrontPageActivity">
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:parentActivityName=".FrontPageActivity">
+        </activity>
+
+    </application>
+
+</manifest>
