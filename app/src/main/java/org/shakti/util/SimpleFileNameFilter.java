@@ -1,4 +1,4 @@
-package org.shakti;
+package org.shakti.util;
 
 import java.io.File;
 import java.io.FilenameFilter;

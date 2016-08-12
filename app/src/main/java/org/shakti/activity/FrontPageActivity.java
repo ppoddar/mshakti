@@ -1,15 +1,12 @@
-package org.shakti;
+package org.shakti.activity;
 
-import android.app.Activity;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+
+import org.shakti.R;
 
 /**
  * The front page.
@@ -27,6 +24,8 @@ public class FrontPageActivity extends AppCompatActivity {
                 Intent readIntent = new Intent(FrontPageActivity.this, IndexPageActivity.class);
 
                 startActivity(readIntent);
+
+                FrontPageActivity.this.finish();
             }
         });
     }

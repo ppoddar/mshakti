@@ -1,8 +1,10 @@
-package org.shakti;
+package org.shakti.util;
 
 import android.content.Context;
 
 import org.json.JSONArray;
+import org.shakti.data.ContentIndex;
+import org.shakti.R;
 
 /**
  * Created by ppoddar on 8/9/16.

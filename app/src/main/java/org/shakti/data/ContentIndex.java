@@ -1,12 +1,12 @@
-package org.shakti;
+package org.shakti.data;
 
 import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.shakti.data.Content;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

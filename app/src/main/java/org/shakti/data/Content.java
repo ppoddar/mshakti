@@ -1,15 +1,10 @@
-package org.shakti;
+package org.shakti.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Content implements Parcelable {
     String mPath;      // Path relative to a root directory supplied from outside

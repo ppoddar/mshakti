@@ -1,10 +1,15 @@
-package org.shakti;
+package org.shakti.adapter;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
+
+import org.shakti.activity.PageActivity;
+import org.shakti.data.Content;
+import org.shakti.data.ContentIndex;
+import org.shakti.fragment.PageFragment;
 
 /**
  * Created by ppoddar on 8/8/16.
@@ -14,7 +19,7 @@ public class MultilingualPageAdapter extends FragmentStatePagerAdapter {
 
     ContentIndex mIndex;
 
-    MultilingualPageAdapter(FragmentManager fm, ContentIndex index) {
+    public MultilingualPageAdapter(FragmentManager fm, ContentIndex index) {
         super(fm);
         mIndex = index;
     }
@@ -31,7 +36,7 @@ public class MultilingualPageAdapter extends FragmentStatePagerAdapter {
         Bundle bundle = new Bundle();
         bundle.putString(PageActivity.KEY_CONTENT, content.toJSON().toString());
         bundle.putBoolean(PageActivity.KEY_SHOWING_ORIGINAL, false);
-        fragment.mAdapter = this;
+        fragment.setAdapter(this);
         //Log.d(TAG, "getItem() Fragment.setArguments(bundle=" + bundle + ")");
         fragment.setArguments(bundle);
         return fragment;

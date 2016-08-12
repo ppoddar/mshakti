@@ -8,21 +8,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".FrontPageActivity">
+        <activity android:name=".activity.FrontPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".PageActivity"
-            android:parentActivityName=".FrontPageActivity">
+        <activity android:name=".activity.PageActivity"
+            android:parentActivityName=".activity.FrontPageActivity">
         </activity>
-        <activity android:name=".IndexPageActivity"
-            android:parentActivityName=".FrontPageActivity">
+        <activity android:name=".activity.IndexPageActivity"
+            android:parentActivityName=".activity.FrontPageActivity">
         </activity>
-        <activity android:name=".AboutActivity"
-            android:parentActivityName=".FrontPageActivity">
+        <activity android:name=".activity.AboutActivity"
+            android:parentActivityName=".activity.FrontPageActivity">
         </activity>
 
     </application>

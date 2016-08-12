@@ -1,8 +1,10 @@
-package org.shakti;
+package org.shakti.util;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
+
+import org.shakti.R;
 
 import java.util.HashMap;
 import java.util.Map;

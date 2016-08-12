@@ -1,4 +1,4 @@
-package org.shakti;
+package org.shakti.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import org.shakti.adapter.MultilingualPageAdapter;
+import org.shakti.util.FileManager;
+import org.shakti.util.FontManager;
+import org.shakti.util.IndexManager;
+import org.shakti.R;
 
 /**
  * Created by ppoddar on 8/8/16.

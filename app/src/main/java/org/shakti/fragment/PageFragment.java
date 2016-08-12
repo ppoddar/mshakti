@@ -1,4 +1,4 @@
-package org.shakti;
+package org.shakti.fragment;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
@@ -18,6 +18,11 @@ import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.shakti.data.Content;
+import org.shakti.util.FileManager;
+import org.shakti.util.FontManager;
+import org.shakti.R;
+import org.shakti.activity.PageActivity;
 
 import java.io.InputStream;
 
@@ -32,7 +37,7 @@ public class PageFragment extends Fragment {
     private static final String TAG = "PageFragment";
     private static final long ANIM_DURATION = 100;
 
-    PagerAdapter mAdapter;
+    private  PagerAdapter mAdapter;
 
     // The content is always the translated content, never the original.
     // when original content is to be shown then it is obtained by {@link Content#getOriginal()}
@@ -221,5 +226,9 @@ public class PageFragment extends Fragment {
         } catch (JSONException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void setAdapter(PagerAdapter adapter) {
+        mAdapter = adapter;
     }
 }

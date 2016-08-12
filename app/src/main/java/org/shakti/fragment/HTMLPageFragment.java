@@ -1,25 +1,21 @@
-package org.shakti;
+package org.shakti.fragment;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.graphics.Typeface;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.TextView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.InputStream;
+import org.shakti.R;
+import org.shakti.activity.PageActivity;
 
 /**
  * Shows a page with content. Also toggles between translated and original content.
@@ -31,9 +27,8 @@ import java.io.InputStream;
 public class HTMLPageFragment extends Fragment {
     private static final String TAG = "HTMLPageFragment";
 
-
     private String mContentURL;
-    PagerAdapter mAdapter;
+    private PagerAdapter mAdapter;
 
 
     public String getUrl() {
@@ -52,13 +47,22 @@ public class HTMLPageFragment extends Fragment {
 
         setArguments(savedInstanceState);
 
+        showContent(view);
+
         return view;
+    }
+
+    public void setAdapter(PagerAdapter adapter) {
+        mAdapter = adapter;
+        showContent(getView());
+
     }
 
     @Override
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
         setArguments(savedState);
+        showContent(getView());
     }
 
 
@@ -89,10 +93,29 @@ public class HTMLPageFragment extends Fragment {
             Log.d(TAG, "***WARN: not showing because view or content is null");
             return;
         }
-        Log.d("HTMLPage", "loading " + mContentURL);
 
-      ((WebView)view.findViewById(R.id.htmlpage_webview)).loadUrl(mContentURL);
-        mAdapter.notifyDataSetChanged();
+
+        final WebView webView = (WebView) view.findViewById(R.id.htmlpage_webview);
+        // Loading on a separate thread. Using main thread often does not load the page
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("HTMLPage", "loading " + mContentURL + " page adapter is " + mAdapter);
+
+                webView.getSettings().setUseWideViewPort(true);
+                webView.getSettings().setLoadWithOverviewMode(true);
+                webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
+                webView.getSettings().setMinimumFontSize(14);
+                webView.loadUrl(mContentURL);
+
+                if (mAdapter != null) {
+                    mAdapter.notifyDataSetChanged();
+                }
+            }
+        });
+
+
 
 
    }
@@ -109,4 +132,6 @@ public class HTMLPageFragment extends Fragment {
         mContentURL = bundle.getString(PageActivity.KEY_CONTENT);
 
     }
+
+
 }
